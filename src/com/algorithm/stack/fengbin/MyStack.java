@@ -9,6 +9,7 @@ import java.util.Stack;
  * 
  * @author fengbincao
  */
+
 public class MyStack {
 	private Stack<Integer> stackData;
 	private Stack<Integer> stackMin;
@@ -18,6 +19,10 @@ public class MyStack {
 		this.stackMin = new Stack<Integer>();
 	}
 	
+	/**
+	 * 入栈的方法
+	 * @param newNumber		待入栈的元素
+	 */
 	public void push(int newNumber) {
 		if (stackMin.isEmpty()) {
 			// stackMin为空，直接将新元素视为最小值入栈即可
@@ -30,6 +35,9 @@ public class MyStack {
 		this.stackData.push(newNumber);
 	}
 	
+	/**
+	 * 出栈的方法
+	 */
 	public void pop() {
 		if (stackData.isEmpty()) {
 			throw new RuntimeException("Your stack is empty");
@@ -40,6 +48,21 @@ public class MyStack {
 		}
 	}
 	
+	/**
+	 * 获取栈顶元素的方法
+	 * @return		栈顶元素
+	 */
+	public int peek() {
+		if (stackData.isEmpty()) {
+			throw new RuntimeException("Your stack is empty");
+		}
+		return stackData.peek();
+	}
+	
+	/**
+	 * 获取栈中最小元素的方法
+	 * @return		当前栈中的最小元素
+	 */
 	public int getMin() {
 		if (stackMin.isEmpty()) {
 			throw new RuntimeException("Your stack is empty");
