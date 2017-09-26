@@ -1,6 +1,5 @@
 package com.algorithm.stack.diana;
 
-import java.util.Stack;
 
 /**
  * 问题描述：
