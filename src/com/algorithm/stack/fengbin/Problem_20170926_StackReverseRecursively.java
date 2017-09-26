@@ -1,4 +1,7 @@
 package com.algorithm.stack.fengbin;
+
+import java.util.Stack;
+
 /**
  * 问题描述:
  *
@@ -14,12 +17,16 @@ package com.algorithm.stack.fengbin;
  */
 public class Problem_20170926_StackReverseRecursively {
 
-	/**
-	 * @param args
-	 */
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Stack<Integer> myStack = new Stack<>();
+		myStack.push(12);
+		myStack.push(15);
+		myStack.push(1);
+		myStack.push(190);
+		System.out.println(myStack);
+		StackReverseUtil.reverse(myStack);
+		System.out.println(myStack);
 	}
 
 }
