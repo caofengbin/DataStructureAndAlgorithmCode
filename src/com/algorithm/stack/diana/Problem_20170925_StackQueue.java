@@ -24,12 +24,12 @@ public class Problem_20170925_StackQueue {
 		for (int i = 0; i < 10; i++) {
 			stackQueue.push(i);
 		}
-		System.out.println("TwoStackQueue---push--after-" + stackQueue.toString());
+		System.out.println("TwoStackQueue---push--after-" + stackQueue.mStackPush.toString());
 		for (int i = 0; i < 3; i++) {
 			int value = stackQueue.pop();
 			System.out.println("pop-" + value);
 		}
-		System.out.println("TwoStackQueue---pop--after-"+ stackQueue.toString());
+		System.out.println("TwoStackQueue---pop--after-"+ stackQueue.mStackPop.toString());
 		System.out.println("TwoStackQueue---peek--"+ stackQueue.peek());
 
 	}
