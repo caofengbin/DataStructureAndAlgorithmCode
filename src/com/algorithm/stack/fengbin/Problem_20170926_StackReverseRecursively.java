@@ -23,7 +23,7 @@ public class Problem_20170926_StackReverseRecursively {
 		myStack.push(12);
 		myStack.push(15);
 		myStack.push(1);
-		myStack.push(190);
+		
 		System.out.println(myStack);
 		StackReverseUtil.reverse(myStack);
 		System.out.println(myStack);
