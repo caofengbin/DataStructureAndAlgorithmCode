@@ -1,5 +1,6 @@
 package com.algorithm.stack.diana;
 
+import java.util.Stack;
 
 /**
  * 问题描述：
@@ -19,6 +20,17 @@ public class Problem_20170925_StackQueue {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		TwoStackQueue stackQueue = new TwoStackQueue();
+		for (int i = 0; i < 10; i++) {
+			stackQueue.push(i);
+		}
+		System.out.println("TwoStackQueue---push--after-" + stackQueue.toString());
+		for (int i = 0; i < 3; i++) {
+			int value = stackQueue.pop();
+			System.out.println("pop-" + value);
+		}
+		System.out.println("TwoStackQueue---pop--after-"+ stackQueue.toString());
+		System.out.println("TwoStackQueue---peek--"+ stackQueue.peek());
 
 	}
 }
