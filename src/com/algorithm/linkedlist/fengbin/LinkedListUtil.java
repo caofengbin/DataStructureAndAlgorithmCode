@@ -96,4 +96,26 @@ public class LinkedListUtil {
 		System.out.println("链表长度为:" + length);
 		return length;
 	}
+
+	/**
+	 * 判断给定的链表是否为有序链表的方法
+	 * 
+	 * @param headNode
+	 *            待判断的链表的头结点
+	 * @return true表示是有序链表
+	 */
+	public static boolean isLinkedListSorted(LinkedNode headNode) {
+		if(getLinkedListLength(headNode) == 1) {
+			return true;
+		}
+		LinkedNode pointNode = new LinkedNode();
+		pointNode = headNode;
+		while (pointNode != null && pointNode.next != null) {
+			if (pointNode.data > pointNode.next.data) {
+				return false;
+			}
+			pointNode = pointNode.next;
+		}
+		return true;
+	}
 }
