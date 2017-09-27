@@ -34,20 +34,5 @@ public class StackReverseUtil {
 			return last;
 		}
 	}
-
-	/**
-	 * 使一个栈中的元素进行逆序的方法 一个错误的示例代码
-	 * 
-	 * @param stack
-	 *            待逆序的栈
-	 */
-	public static void reverseStackWrong(Stack<Integer> stack) {
-		if (stack.empty()) {
-			return;
-		} else {
-			int tempItem = stack.pop();
-			reverseStackWrong(stack);
-			stack.push(tempItem);
-		}
-	}
+	
 }
