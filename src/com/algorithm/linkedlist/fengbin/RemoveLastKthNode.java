@@ -17,6 +17,9 @@ public class RemoveLastKthNode {
 	 * @return 删除倒数第K个节点是否成功
 	 */
 	public static LinkedNode removeLastKthNode(LinkedNode headNode, int K) {
+		if (K <= 0) {
+			throw new RuntimeException("输入的K值不合法，K应该大于0");
+		}
 		/**
 		 * 思路: 采用快慢指针法，快指针先移动到第K个位置，慢指针扔停留在头部head节点
 		 * 而后，快指针与慢指针一起移动，当快指针移动到链表的尾部的时候，慢指针所处的位置就是链表的倒数第K个节点所在的位置
@@ -42,9 +45,9 @@ public class RemoveLastKthNode {
 				fastNode = fastNode.next;
 				slowNode = slowNode.next;
 			}
-			System.out.println("慢指针所在的位置:" + slowNode.data);
-
-			return null;
+			// 慢指针所在的位置即为待删除的元素的前一个元素所在的位置
+			slowNode.next = slowNode.next.next;
+			return headNode;
 		}
 
 	}

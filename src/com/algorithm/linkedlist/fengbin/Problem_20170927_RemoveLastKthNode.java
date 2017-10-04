@@ -13,10 +13,15 @@ public class Problem_20170927_RemoveLastKthNode {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		// 对一个单链表元素进行操作
 		int array[] = { 2, 4, 21, 33, 56, 32, 21 };
 		LinkedNode headLinkedNode = LinkedListUtil.initLinkedList(array);
-		RemoveLastKthNode.removeLastKthNode(headLinkedNode, 7);
-		LinkedListUtil.printLinkedList(RemoveLastKthNode.removeLastKthNode(headLinkedNode, 7));
+		LinkedListUtil.printLinkedList(RemoveLastKthNode.removeLastKthNode(headLinkedNode, 3));
+		
+		// 对一个双链表元素进行操作
+		int array2[] = {  };
+		DoubleLinkedNode headDoubleNode = LinkedListUtil.initDoubleLinkedList(array2);
+		LinkedListUtil.printDoubleLinkedList(headDoubleNode);
 	}
 
 }
