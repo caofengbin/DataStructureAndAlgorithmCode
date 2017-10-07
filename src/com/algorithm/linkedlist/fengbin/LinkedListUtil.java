@@ -105,7 +105,7 @@ public class LinkedListUtil {
 	 * @return true表示是有序链表
 	 */
 	public static boolean isLinkedListSorted(LinkedNode headNode) {
-		if(getLinkedListLength(headNode) == 1) {
+		if (getLinkedListLength(headNode) == 1) {
 			return true;
 		}
 		LinkedNode pointNode = new LinkedNode();
@@ -118,11 +118,13 @@ public class LinkedListUtil {
 		}
 		return true;
 	}
-	
+
 	/**
 	 * 方法6:通过一个给定的数组结构，初始化一个双链表
-	 * @param arrays		待初始化为双链表的数组元素
-	 * @return			双链表结构的头结点
+	 * 
+	 * @param arrays
+	 *            待初始化为双链表的数组元素
+	 * @return 双链表结构的头结点
 	 */
 	public static DoubleLinkedNode initDoubleLinkedList(int[] arrays) {
 		if (arrays.length == 0) {
@@ -143,10 +145,12 @@ public class LinkedListUtil {
 		tailNode.next = null;
 		return headNode;
 	}
-	
+
 	/**
 	 * 方法7:顺序打印双链表的方法
-	 * @param headNode	待打印的双链表的头结点
+	 * 
+	 * @param headNode
+	 *            待打印的双链表的头结点
 	 */
 	public static void printDoubleLinkedList(DoubleLinkedNode headNode) {
 		List<Integer> arratList = new ArrayList<>();
@@ -158,21 +162,23 @@ public class LinkedListUtil {
 		}
 		System.out.println("待打印的双链表内容为:" + arratList);
 	}
-	
+
 	/**
 	 * 方法8:逆序打印双链表的方法
-	 * @param headNode	待逆序打印的双链表的头结点
+	 * 
+	 * @param headNode
+	 *            待逆序打印的双链表的头结点
 	 */
 	public static void reversedPrintDoubleLinkedList(DoubleLinkedNode headNode) {
 		List<Integer> arratList = new ArrayList<>();
 		DoubleLinkedNode pointNode = new DoubleLinkedNode();
 		pointNode = headNode;
-		
+
 		if (pointNode == null) {
 			System.out.println("待打印的链表为空链表");
 			return;
 		}
-		
+
 		// 先遍历到链表的尾节点处
 		while (pointNode.next != null) {
 			pointNode = pointNode.next;
@@ -183,4 +189,52 @@ public class LinkedListUtil {
 		}
 		System.out.println("待打印的双链表内容为:" + arratList);
 	}
+
+	/**
+	 * 方法9:通过给定的数组列表，创建一个环形单链表的方法
+	 * 
+	 * @param arrays
+	 *            给定的数组
+	 * @return 创建完成后的链表的头结点
+	 */
+	public static LinkedNode initCircleLinkedList(int[] arrays) {
+		if (arrays.length == 0) {
+			return null;
+		}
+		LinkedNode headNode = new LinkedNode(arrays[0]);
+		if (arrays.length == 1) {
+			headNode.next = headNode;
+			return headNode;
+		}
+		LinkedNode tailNode = headNode;
+		for (int i = 1; i < arrays.length; i++) {
+			int tempData = arrays[i];
+			LinkedNode tempLinkedNode = new LinkedNode(tempData);
+			tailNode.next = tempLinkedNode;
+			tailNode = tempLinkedNode;
+		}
+		tailNode.next = headNode;
+		return headNode;
+	}
+
+	/**
+	 * 方法10:打印环形单链表的方法
+	 * 
+	 * @param headNode
+	 *            待打印的环形单链表的头结点
+	 */
+	public static void printCircleLinkedList(LinkedNode headNode) {
+		List<Integer> arratList = new ArrayList<>();
+		LinkedNode pointNode = headNode;
+		if (pointNode != null) {
+			arratList.add(pointNode.data);
+			pointNode = pointNode.next;
+		}
+		while (pointNode != headNode) {
+			arratList.add(pointNode.data);
+			pointNode = pointNode.next;
+		}
+		System.out.println("待打印的链表内容为:" + arratList);
+	}
+
 }

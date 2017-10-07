@@ -22,8 +22,12 @@ public class Problem_20171007_ReversePartList {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int array[] = { 1, 2, 3, 4, 5 };
+		LinkedNode headLinkedNode = LinkedListUtil.initLinkedList(array);
+		LinkedListUtil.printLinkedList(headLinkedNode);
+		
+		LinkedNode tempHeadNode1 = ReversePartListUtil.reversePartList(headLinkedNode, 0, 6);
+		LinkedListUtil.printLinkedList(tempHeadNode1);
 	}
 
 }
