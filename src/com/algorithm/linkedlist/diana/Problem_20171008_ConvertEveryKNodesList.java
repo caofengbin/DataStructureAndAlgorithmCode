@@ -1,6 +1,6 @@
 package com.algorithm.linkedlist.diana;
 /**
- * 问题藐视：
+ * 问题描述：
  * 将单链表的每K个节点之间逆序
  * 
  * 详细：
