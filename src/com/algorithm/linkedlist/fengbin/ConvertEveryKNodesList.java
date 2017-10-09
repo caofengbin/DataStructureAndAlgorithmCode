@@ -3,7 +3,9 @@ package com.algorithm.linkedlist.fengbin;
 import java.util.Stack;
 
 /**
- * 将单链表的每K个节点之间逆序的方法实现 两种方法， 一种方法是通过栈结构，时间复杂度为O(N)，额外空间复杂度为O(K)，
+ * 将单链表的每K个节点之间逆序的方法实现 。
+ * 两种方法:
+ * 一种方法是通过栈结构，时间复杂度为O(N)，额外空间复杂度为O(K)，
  * 一种方法是直接在原地调整，时间复杂度为O(N)，额外空间复杂度为O(1)，
  * 
  * @author fengbincao

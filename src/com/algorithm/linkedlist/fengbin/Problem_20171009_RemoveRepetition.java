@@ -20,8 +20,13 @@ public class Problem_20171009_RemoveRepetition {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		int array1[] = { 7, 2, 3, 3, 4, 4, 2, 1, 1, 8 };
+		LinkedNode headLinkedNode1 = LinkedListUtil.initLinkedList(array1);
+		LinkedListUtil.printLinkedList(headLinkedNode1);
 
+		LinkedNode headLinkedNode2 = RemoveRepetition
+				.removeRepetitionNode2(headLinkedNode1);
+		LinkedListUtil.printLinkedList(headLinkedNode2);
 	}
 
 }
