@@ -22,17 +22,24 @@ public class Problem_20171008_ConvertEveryKNodesList {
 	 */
 	public static void main(String[] args) {
 		int array[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-		final int K = 5;
+		final int K1 = 5;
 		LinkedNode headLinkedNode1 = LinkedListUtil.initLinkedList(array);
-		System.out.println("旋转之前");
+		System.out.println("旋转之前:");
 		LinkedListUtil.printLinkedList(headLinkedNode1);
-		LinkedNode newheadNode = ConvertEveryKNodesList.convertMethod1(headLinkedNode1, K);
-		System.out.println("旋转之后");
+		LinkedNode newheadNode = ConvertEveryKNodesList.convertMethod1(headLinkedNode1, K1);
+		System.out.println("旋转之后:");
 		LinkedListUtil.printLinkedList(newheadNode);
 		
 		System.out.println();
 		
-		
+		int array2[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+		final int K2 = 4;
+		LinkedNode headLinkedNode2 = LinkedListUtil.initLinkedList(array2);
+		System.out.println("旋转之前:");
+		LinkedListUtil.printLinkedList(headLinkedNode2);
+		LinkedNode newheadNode2 = ConvertEveryKNodesList.convertMethod2(headLinkedNode2, K2);
+		System.out.println("旋转之后:");
+		LinkedListUtil.printLinkedList(newheadNode2);
 
 	}
 

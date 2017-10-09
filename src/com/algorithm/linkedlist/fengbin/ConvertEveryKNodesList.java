@@ -92,6 +92,75 @@ public class ConvertEveryKNodesList {
 	 * @return 逆序完成之后的链表头节点
 	 */
 	public static LinkedNode convertMethod2(LinkedNode headNode, int K) {
-		return null;
+		if (K <= 0) {
+			throw new RuntimeException("输入的K值不合法");
+		}
+
+		// 长度为1时，无需逆序操作，直接返回即可
+		if (K < 2) {
+			return headNode;
+		}
+
+		LinkedNode curNode = headNode;
+		LinkedNode startNode = null;
+		LinkedNode preNode = null;
+		LinkedNode nextNode = null;
+
+		int count = 1;
+
+		while (curNode != null) {
+			nextNode = curNode.next;
+
+			if (count == K) {
+				// 凑够了一个K分组的元素，需要进行一次逆序操作,curNode即为当前K分组的最后一个元素
+				startNode = preNode == null ? headNode : preNode.next;
+				// 对第一个K分组的调整存在“换头”问题
+				headNode = preNode == null ? curNode : headNode;
+
+				reverseKNode(preNode, startNode, curNode, nextNode);
+
+				// preNode将会是下一个分组的左边界节点的前一个节点
+				preNode = startNode;
+
+				count = 0;
+			}
+
+			count++;
+			curNode = nextNode;
+		}
+		return headNode;
+	}
+
+	/**
+	 * 逆序一个K分组中的元素
+	 * 
+	 * @param leftNode
+	 *            分组左边的节点(上一个分组的leftNode)
+	 * @param beginNode
+	 *            分组的开始位置
+	 * @param endNode
+	 *            分组的结束位置
+	 * @param rightNode
+	 *            分组右边的节点(下一个分组的beginNode)
+	 * @return
+	 */
+	private static void reverseKNode(LinkedNode leftNode, LinkedNode beginNode,
+			LinkedNode endNode, LinkedNode rightNode) {
+		LinkedNode preNode = beginNode;
+		LinkedNode curNode = beginNode.next;
+		LinkedNode nextNode = null;
+		while (curNode != rightNode) {
+			nextNode = curNode.next;
+			curNode.next = preNode;
+			preNode = curNode;
+			curNode = nextNode;
+		}
+
+		// 对第一个K组的节点需要特殊的判断处理
+		if (leftNode != null) {
+			leftNode.next = endNode;
+		}
+
+		beginNode.next = rightNode;
 	}
 }
