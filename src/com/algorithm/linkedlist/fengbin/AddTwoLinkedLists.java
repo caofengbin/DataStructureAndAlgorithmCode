@@ -55,6 +55,13 @@ public class AddTwoLinkedLists {
 			LinkedNode valueNode = new LinkedNode(nodeValue);
 			valueNode.next = newHead;
 			newHead = valueNode;
+			
+			if (!valueStack1.isEmpty()) {
+				valueStack1.pop();
+			}
+			if (!valueStack2.isEmpty()) {
+				valueStack2.pop();
+			}
 		}
 		
 		// 最后再判断一下进位值是否为非0.如果为非0，则还需要重新加上一个节点
