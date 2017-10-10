@@ -1,4 +1,4 @@
-package com.algorithm.linkedlist.fengbin;
+package com.algorithm.linkedlist.diana;
 
 /**
  * 问题描述: 
