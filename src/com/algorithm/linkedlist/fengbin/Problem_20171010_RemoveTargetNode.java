@@ -16,8 +16,13 @@ public class Problem_20171010_RemoveTargetNode {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		int array[] = { 1, 1, 1 };
+		LinkedNode headLinkedNode = LinkedListUtil.initLinkedList(array);
+		LinkedListUtil.printLinkedList(headLinkedNode);
 
+		LinkedNode headLinkedNode2 = RemoveTargetNode.removeMethod2(
+				headLinkedNode, 1);
+		LinkedListUtil.printLinkedList(headLinkedNode2);
 	}
 
 }
