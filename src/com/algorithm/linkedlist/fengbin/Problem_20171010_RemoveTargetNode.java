@@ -1,7 +1,7 @@
 package com.algorithm.linkedlist.fengbin;
 
 /**
- * 问题描述
+ * 问题描述:
  * 
  * @author fengbincao
  */
