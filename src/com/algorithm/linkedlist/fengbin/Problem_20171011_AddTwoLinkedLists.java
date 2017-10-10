@@ -18,8 +18,12 @@ public class Problem_20171011_AddTwoLinkedLists {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int array[] = { 9, 3, 7 };
+		int array2[] = { 6, 3 };
+		LinkedNode headLinkedNode1 = LinkedListUtil.initLinkedList(array);
+		LinkedNode headLinkedNode2 = LinkedListUtil.initLinkedList(array);
+		LinkedNode newHeadNode = AddTwoLinkedLists.addListMethod1(headLinkedNode1, headLinkedNode2);
+		LinkedListUtil.printLinkedList(newHeadNode);
 	}
 
 }
