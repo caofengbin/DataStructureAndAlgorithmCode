@@ -19,11 +19,21 @@ public class Problem_20171011_AddTwoLinkedLists {
 	 */
 	public static void main(String[] args) {
 		int array[] = { 9, 3, 7 };
-		int array2[] = { 6, 3 };
+		int array2[] = { 6, 3, 3, 2 };
 		LinkedNode headLinkedNode1 = LinkedListUtil.initLinkedList(array);
-		LinkedNode headLinkedNode2 = LinkedListUtil.initLinkedList(array);
-		LinkedNode newHeadNode = AddTwoLinkedLists.addListMethod1(headLinkedNode1, headLinkedNode2);
+		LinkedNode headLinkedNode2 = LinkedListUtil.initLinkedList(array2);
+		LinkedNode newHeadNode = AddTwoLinkedLists.addListMethod1(
+				headLinkedNode1, headLinkedNode2);
+		LinkedListUtil.printLinkedList(headLinkedNode1);
+		LinkedListUtil.printLinkedList(headLinkedNode2);
 		LinkedListUtil.printLinkedList(newHeadNode);
+		
+		System.out.println();
+		LinkedNode newHeadNode2 = AddTwoLinkedLists.addListMethod2(
+				headLinkedNode1, headLinkedNode2);
+		LinkedListUtil.printLinkedList(newHeadNode2);
+		LinkedListUtil.printLinkedList(headLinkedNode1);
+		LinkedListUtil.printLinkedList(headLinkedNode2);
 	}
 
 }
