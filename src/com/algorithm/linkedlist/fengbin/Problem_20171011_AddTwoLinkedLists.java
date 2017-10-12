@@ -24,16 +24,23 @@ public class Problem_20171011_AddTwoLinkedLists {
 		LinkedNode headLinkedNode2 = LinkedListUtil.initLinkedList(array2);
 		LinkedNode newHeadNode = AddTwoLinkedLists.addListMethod1(
 				headLinkedNode1, headLinkedNode2);
+		
+		System.out.println("待相加的链表1:");
 		LinkedListUtil.printLinkedList(headLinkedNode1);
+		
+		System.out.println("待相加的链表2:");
 		LinkedListUtil.printLinkedList(headLinkedNode2);
+		System.out.println();
+		
+		System.out.println("通过方法1相加后的结果为:");
 		LinkedListUtil.printLinkedList(newHeadNode);
 		
 		System.out.println();
 		LinkedNode newHeadNode2 = AddTwoLinkedLists.addListMethod2(
 				headLinkedNode1, headLinkedNode2);
+		System.out.println("通过方法2相加后的结果为:");
 		LinkedListUtil.printLinkedList(newHeadNode2);
-		LinkedListUtil.printLinkedList(headLinkedNode1);
-		LinkedListUtil.printLinkedList(headLinkedNode2);
+		
 	}
 
 }
