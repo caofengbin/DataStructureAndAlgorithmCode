@@ -1,7 +1,7 @@
 package com.algorithm.linkedlist.fengbin;
 
 /**
- * 单链表的选择排序，给定一个无序单链表的头结点head，实现单链表的选择排序。 要求额外控件复杂度为O(1)
+ * 单链表的选择排序，给定一个无序单链表的头结点head，实现单链表的选择排序。 要求额外空间复杂度为O(1)
  * 
  * @author fengbincao
  */
