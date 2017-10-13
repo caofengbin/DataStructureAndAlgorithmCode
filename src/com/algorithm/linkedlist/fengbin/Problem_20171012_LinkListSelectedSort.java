@@ -11,8 +11,12 @@ public class Problem_20171012_LinkListSelectedSort {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int array[] = { 9, 3, 7, 78, 33 };
+		LinkedNode headLinkedNode1 = LinkedListUtil.initLinkedList(array);
+		LinkedListUtil.printLinkedList(headLinkedNode1);
+		
+		LinkedNode newHeadNode = LinkListSelectedSort.selectedSort(headLinkedNode1);
+		LinkedListUtil.printLinkedList(newHeadNode);
 	}
 
 }

@@ -15,11 +15,34 @@ public class LinkListSelectedSort {
 	 * @return
 	 */
 	public static LinkedNode selectedSort(LinkedNode headNode) {
-		LinkedNode curNode = null;
-		LinkedNode preNode = null;
-		LinkedNode minNode = null;
-		LinkedNode newHeadNode = null;
-		return null;
+		LinkedNode tailNode = null;								// 排序部分的尾部
+		LinkedNode curNode = headNode;							// 未排序部分的头部
+		LinkedNode smallNodePre = null;							// 最小节点的前一个节点
+		LinkedNode smallNode = null;							// 最小节点
+		
+		while (curNode != null) {
+			smallNode = curNode;
+			smallNodePre = getSmallestPreNode(curNode);
+			
+			if (smallNodePre != null) {
+				// 将最小的节点删除
+				smallNode = smallNodePre.next;
+				smallNodePre.next = smallNode.next;
+			}
+			
+			curNode = curNode == smallNode ? curNode.next : curNode;
+					
+			// 将新的排序好的节点插入到链表中
+			if (tailNode == null) {
+				headNode = smallNode;
+			} else {
+				tailNode.next = smallNode;
+			}
+			
+			tailNode = smallNode;
+		}
+		
+		return headNode;
 
 	}
 
@@ -30,7 +53,7 @@ public class LinkListSelectedSort {
 	 *            待处理的链表的头结点
 	 * @return 节点值最小的元素的前一个元素的前一个节点
 	 */
-	private static LinkedNode getSmallestNode(LinkedNode headNode) {
+	private static LinkedNode getSmallestPreNode(LinkedNode headNode) {
 		LinkedNode curNode = headNode.next;
 		LinkedNode preNode = headNode;
 
@@ -40,8 +63,8 @@ public class LinkListSelectedSort {
 		while (curNode != null) {
 
 			if (curNode.data < smallNode.data) {
-				smallNode = curNode;
 				preSmallNode = preNode;
+				smallNode = curNode;
 			}
 
 			preNode = curNode;
