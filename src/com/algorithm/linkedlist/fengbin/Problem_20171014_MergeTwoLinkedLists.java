@@ -21,6 +21,7 @@ public class Problem_20171014_MergeTwoLinkedLists {
 		LinkedNode newHeadNode1 = MergeTwoLinkedLists.mergeLists(
 				headLinkedNode1, headLinkedNode2);
 		LinkedListUtil.printLinkedList(newHeadNode1);
+		LinkedListUtil.printLinkedList(headLinkedNode1);
 		System.out.println();
 
 		// 测试用例2：存在空链表的场景

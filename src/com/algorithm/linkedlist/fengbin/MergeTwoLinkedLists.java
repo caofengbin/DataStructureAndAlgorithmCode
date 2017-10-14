@@ -53,6 +53,7 @@ public class MergeTwoLinkedLists {
 			}
 		}
 
+		// 处理还未遍历完成的那个链表的剩余部分的元素节点
 		if (curNode2 != null) {
 			newCurNode.next = curNode2;
 		} else if (curNode1 != null) {
@@ -60,7 +61,7 @@ public class MergeTwoLinkedLists {
 		} else {
 			newCurNode.next = null;
 		}
-		
+
 		return newHead;
 	}
 }
