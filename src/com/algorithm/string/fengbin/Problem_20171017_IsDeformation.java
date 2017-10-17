@@ -17,8 +17,13 @@ public class Problem_20171017_IsDeformation {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		String str1 = "123";
+		String str2 = "329￥";
+		if(DeformationStr.isDeformation(str1, str2)) {
+			System.out.println(str1 + " and " + str2 + " 互为变形词");
+		} else {
+			System.out.println(str1 + " and " + str2 + " 不符合要求");
+		}
 	}
 
 }
