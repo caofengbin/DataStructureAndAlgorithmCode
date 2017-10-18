@@ -11,7 +11,7 @@ package com.algorithm.string.fengbin;
  * 
  * 测试用例:
  * str="A1CD2E33"，返回36.
- * str="A-1B--2C--D6E"
+ * str="A-1B--2C--D6E"，返回7
  * @author fengbincao
  */
 public class Problem_20171018_AllNumbersSum {
@@ -20,8 +20,17 @@ public class Problem_20171018_AllNumbersSum {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		String str1 = "--AD-123i3";
+		int num1 = AddNumbersInStr.resolveSums(str1);
+		System.out.println(str1 + " 结果为: " + num1);
+		
+		String str2 = "A1CD2E33";
+		int num2 = AddNumbersInStr.resolveSums(str2);
+		System.out.println(str2 + " 结果为: " + num2);
+		
+		String str3 = "A-1B--2C--D6E";
+		int num3 = AddNumbersInStr.resolveSums(str3);
+		System.out.println(str3 + " 结果为: " + num3);
 	}
 
 }

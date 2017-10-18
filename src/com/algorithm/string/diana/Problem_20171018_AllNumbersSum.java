@@ -11,7 +11,7 @@ package com.algorithm.string.diana;
  * 
  * 测试用例:
  * str="A1CD2E33"，返回36.
- * str="A-1B--2C--D6E"
+ * str="A-1B--2C--D6E"，返回7
  * @author fengbincao
  */
 public class Problem_20171018_AllNumbersSum {
