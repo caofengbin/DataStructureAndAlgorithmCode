@@ -11,7 +11,7 @@ public class AddNumbersInStr {
 		// 遍历字符串中的每一个字符
 		for (char tempChar : arrayChars) {
 			int cur = tempChar - '0';
-			
+
 			// 处理可能出现的连续的数字字符串
 			if (cur >= 0 && cur <= 9) {
 				waitToAddNum = waitToAddNum * 10 + cur;
@@ -21,7 +21,7 @@ public class AddNumbersInStr {
 			} else {
 				// 处理其他的非相关字符
 				sum += (isPositive ? waitToAddNum : -waitToAddNum);
-			    // 相加完成后相关的标识符清0
+				// 相加完成后相关的标识符清0
 				isPositive = true;
 				waitToAddNum = 0;
 			}

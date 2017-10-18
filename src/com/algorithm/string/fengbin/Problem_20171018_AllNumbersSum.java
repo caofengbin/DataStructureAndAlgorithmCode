@@ -31,6 +31,10 @@ public class Problem_20171018_AllNumbersSum {
 		String str3 = "A-1B--2C--D6E";
 		int num3 = AddNumbersInStr.resolveSums(str3);
 		System.out.println(str3 + " 结果为: " + num3);
+		
+		String str4 = "";
+		int num4 = AddNumbersInStr.resolveSums(str4);
+		System.out.println(str4 + " 结果为: " + num4);
 	}
 
 }
