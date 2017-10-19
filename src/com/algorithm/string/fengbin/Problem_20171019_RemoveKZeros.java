@@ -16,6 +16,14 @@ public class Problem_20171019_RemoveKZeros {
 	 */
 	public static void main(String[] args) {
 
+		String originStr1 = "A00B";
+		String resuleStr1 = RemoveZerosInStr.removeZero(originStr1, 2);
+		System.out.println(originStr1 + " 处理结果为: " + resuleStr1);
+		
+		String originStr2 = "A0000B000";
+		String resuleStr2 = RemoveZerosInStr.removeZero(originStr2, 3);
+		System.out.println(originStr2 + " 处理结果为: " + resuleStr2);
+		
 	}
-
+	
 }
