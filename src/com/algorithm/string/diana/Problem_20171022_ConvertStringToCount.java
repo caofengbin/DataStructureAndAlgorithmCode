@@ -1,4 +1,4 @@
-package com.algorithm.string.fengbin;
+package com.algorithm.string.diana;
 /**
  * 生成字符串的统计字符串
  * 例如：
@@ -7,7 +7,7 @@ package com.algorithm.string.fengbin;
  * @author caofengbin
  *
  */
-public class Problem_20171022_StringToInt {
+public class Problem_20171022_ConvertStringToCount {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

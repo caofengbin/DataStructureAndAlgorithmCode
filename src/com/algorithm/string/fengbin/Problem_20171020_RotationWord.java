@@ -18,8 +18,32 @@ package com.algorithm.string.fengbin;
 public class Problem_20171020_RotationWord {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// 测试用例1
+		String originStr1 = "cdab";
+		String matchStr1 = "abcd";
+		if (RotationWord.isRotationWord(originStr1, matchStr1)) {
+			System.out.println(originStr1 + " 与  " + matchStr1 + " 互为旋转词");
+		} else {
+			System.out.println(originStr1 + " 与 " + matchStr1 + " 不是旋转词的关系");
+		}
 
+		// 测试用例2
+		String originStr2 = "1ab2";
+		String matchStr2 = "ab12";
+		if (RotationWord.isRotationWord(originStr2, matchStr2)) {
+			System.out.println(originStr2 + " 与  " + matchStr2 + " 互为旋转词");
+		} else {
+			System.out.println(originStr2 + " 与 " + matchStr2 + " 不是旋转词的关系");
+		}
+		
+		// 测试用例3
+		String originStr3 = "2ab1";
+		String matchStr3 = "ab12";
+		if (RotationWord.isRotationWord(originStr3, matchStr3)) {
+			System.out.println(originStr3 + " 与  " + matchStr3 + " 互为旋转词");
+		} else {
+			System.out.println(originStr3 + " 与 " + matchStr3 + " 不是旋转词的关系");
+		}
 	}
 
 }
