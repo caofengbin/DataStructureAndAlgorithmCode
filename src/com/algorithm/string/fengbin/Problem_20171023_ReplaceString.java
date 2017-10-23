@@ -21,8 +21,18 @@ public class Problem_20171023_ReplaceString {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		String originStr1 = "123abc";
+		String resultStr1 = ReplaceStringUtil.replaceStr(originStr1, "abc", "4567");
+		System.out.println(resultStr1);
 
+		String originStr2 = "123abcdabc";
+		String resultStr2 = ReplaceStringUtil.replaceStr(originStr2, "abc", "X");
+		System.out.println(resultStr2);
+		
+		String originStr3 = "123abcabc";
+		String resultStr3 = ReplaceStringUtil.replaceStr(originStr3, "abc", "X");
+		System.out.println(resultStr3);
+		
 	}
 
 }

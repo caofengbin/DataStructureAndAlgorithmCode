@@ -1,4 +1,7 @@
-package com.algorithm.string.fengbin;
+package com.algorithm.string.diana;
+
+import com.algorithm.string.fengbin.ReplaceStringUtil;
+
 /**
  * 问题描述:
  * 替换字符串中连续出现的指定字符串
@@ -22,7 +25,7 @@ public class Problem_20171023_ReplaceString {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 }
