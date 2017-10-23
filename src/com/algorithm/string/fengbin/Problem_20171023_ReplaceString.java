@@ -21,18 +21,25 @@ public class Problem_20171023_ReplaceString {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		// 测试用例1
 		String originStr1 = "123abc";
 		String resultStr1 = ReplaceStringUtil.replaceStr(originStr1, "abc", "4567");
 		System.out.println(resultStr1);
 
+		// 测试用例2
 		String originStr2 = "123abcdabc";
 		String resultStr2 = ReplaceStringUtil.replaceStr(originStr2, "abc", "X");
 		System.out.println(resultStr2);
 		
+		// 测试用例3
 		String originStr3 = "123abcabc";
 		String resultStr3 = ReplaceStringUtil.replaceStr(originStr3, "abc", "X");
 		System.out.println(resultStr3);
 		
+		// 测试用例4
+		String originStr4 = "123";
+		String resultStr4 = ReplaceStringUtil.replaceStr(originStr4, "abc", "456");
+		System.out.println(resultStr4);
 	}
 
 }

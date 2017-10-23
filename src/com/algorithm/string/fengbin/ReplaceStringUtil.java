@@ -45,10 +45,16 @@ public class ReplaceStringUtil {
 			if (charArrayOrigin[i] != 0) {
 				currentStr = currentStr + String.valueOf(charArrayOrigin[i]);
 			}
-			if (charArrayOrigin[i] == 0 && (i == 0 || charArrayOrigin[i - 1] != 0)) {
+			if (charArrayOrigin[i] == 0
+					&& (i == 0 || charArrayOrigin[i - 1] != 0)) {
 				resultStr = resultStr + currentStr + toStr;
 				currentStr = "";
 			}
+		}
+
+		// 注意这里的逻辑，需要对为匹配到任何字符串的情况做单独的处理
+		if (!currentStr.equals("")) {
+			resultStr = resultStr + currentStr;
 		}
 
 		return resultStr;
