@@ -11,6 +11,7 @@ package com.algorithm.string.fengbin;
  * (1) str="123abc",from="abc",to="4567",返回"1234567"
  * (2) str="123",from="abc",to="456",返回"123"
  * (3) str="123abcabc",from="abc",to="X",返回"123X"
+ * (4) str="123abcdabc",from="abc",to="X",返回"123XdX"
  * 
  * @author fengbincao
  */
