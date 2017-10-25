@@ -1,4 +1,4 @@
-package com.algorithm.string.fengbin;
+package com.algorithm.string.diana;
 /**
  * 问题描述:
  * 给定一个字符串str，判断是不是整体有效的括号字符串。
