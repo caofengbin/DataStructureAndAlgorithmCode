@@ -16,8 +16,13 @@ public class Problem_20171026_NoRepeatingStr {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		System.out.println(isLegalStr("+0"));
+		System.out.println(isLegalStr("-10"));
+		System.out.println(isLegalStr("-0"));
 	}
 
+	private static boolean isLegalStr(String originStr) {
+		String regex1 = "^[+-]{1}[1-9]{1}[0-9]{0,1}";
+		return originStr.matches(regex1);
+	}
 }
